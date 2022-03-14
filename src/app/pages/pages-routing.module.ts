@@ -1,15 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {LayoutComponent} from './_layout/layout.component';
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./pages/layout.module').then((m) => m.LayoutModule)
+    component: LayoutComponent,
+    children: []
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class PagesRoutingModule { }
