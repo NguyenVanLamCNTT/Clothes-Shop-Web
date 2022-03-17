@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {LayoutComponent} from './_layout/layout.component';
+import {IntroComponent} from './components/intro/intro.component';
+import {WelcomeComponent} from './welcome.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: LayoutComponent,
+    component: WelcomeComponent,
     children: [
       {
-        path: 'welcome',
-        loadChildren: () => import('../modules/welcome/welcome.module').then((m) => m.WelcomeModule)
+        path: 'intro',
+        component: IntroComponent
       }
     ]
   }
@@ -19,4 +20,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class PagesRoutingModule { }
+export class WelcomeRoutingModule { }
