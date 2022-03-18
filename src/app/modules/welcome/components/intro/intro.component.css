@@ -214,5 +214,35 @@
   .card-product{
     width: calc(33.33% - 20px);
   }
+  .title-sale{
+    padding-left: 200px;
+  }
+  .title-sale,
+  .time-sale,
+  .image-sale{
+    width: calc(33.33%- 10px);
+  }
 }
-/*Time Sale*/
+/*Sale*/
+.product-sale{
+  background-color: #f3f2ee;
+  margin: 20px auto;
+}
+.sale-content{
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+}
+.title-sale,
+.time-sale{
+  margin: auto 0;
+}
+.title-sale,
+.time-sale,
+.image-sale{
+  width: calc(33.33%- 10px);
+}
+
