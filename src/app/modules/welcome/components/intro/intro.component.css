@@ -187,10 +187,7 @@
   border-bottom: none;
 }
 /*Card*/
-.image-product{
-  width: 100%;
-  height: 100%;
-}
+
 .card-product{
   margin: 10px 10px;
   width: calc(25% - 20px);
@@ -218,3 +215,4 @@
     width: calc(33.33% - 20px);
   }
 }
+/*Time Sale*/

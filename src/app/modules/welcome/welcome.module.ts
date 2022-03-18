@@ -3,14 +3,14 @@ import { CommonModule } from '@angular/common';
 
 import { WelcomeRoutingModule } from './welcome-routing.module';
 import { IntroComponent } from './components/intro/intro.component';
-import { TestComponent } from './components/test/test.component';
+import {CardProductComponent} from '../../core-ui/card-product/card-product.component';
 
 
 @NgModule({
-  declarations: [IntroComponent, TestComponent],
+  declarations: [IntroComponent, CardProductComponent],
   imports: [
     CommonModule,
-    WelcomeRoutingModule
+    WelcomeRoutingModule,
   ]
 })
 export class WelcomeModule { }
