@@ -40,3 +40,12 @@
 .card-name{
   margin-top: -20px;
 }
+.image-hover{
+  display: none;
+}
+.card-product:hover .card-image .image-hover{
+  display: block;
+}
+.card-product:hover .card-image .image-main{
+  display: none;
+}
