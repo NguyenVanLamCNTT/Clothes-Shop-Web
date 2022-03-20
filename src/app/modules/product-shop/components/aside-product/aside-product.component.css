@@ -1,0 +1,41 @@
+.accordion-item{
+  border: none;
+}
+.accordion-button{
+  border: none;
+  background-color: white;
+  box-shadow: none;
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+}
+.accordion-header{
+  color: black;
+}
+
+.accordion-button:not(.collapsed){
+  color: black;
+}
+.accordion-button:not(.collapsed)::after {
+  background-image:  url('../../../../../assets/product-icon/svg/icon-accordion.svg');
+  transform: rotate(-180deg);
+}
+.list-item ul li {
+  margin-bottom: 10px;
+}
+/*Search*/
+.search-product{
+  border: 1px solid black;
+  margin-left: 20px;
+}
+.input-search{
+  border: none;
+  width: 100%;
+}
+.form-search{
+  display: flex;
+
+}
+input:focus, textarea:focus, select:focus{
+  outline: none;
+}

@@ -24,7 +24,7 @@
   margin-top: -300px;
 }
 .card-product:hover .card-content .card-header-product .btn-add-cart{
-  transition-delay: 0.2s;
+  transition-delay: 0.1s;
   opacity: 1;
   visibility: visible;
 }
@@ -39,6 +39,7 @@
 }
 .card-name{
   margin-top: -20px;
+  font-weight: 480;
 }
 .image-hover{
   display: none;
@@ -49,3 +50,4 @@
 .card-product:hover .card-image .image-main{
   display: none;
 }
+

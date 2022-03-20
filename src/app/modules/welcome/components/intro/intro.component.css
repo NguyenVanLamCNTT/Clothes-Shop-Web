@@ -245,4 +245,8 @@
 .image-sale{
   width: calc(33.33%- 10px);
 }
+.product-sale .sale-content .title-sale p,
+.product-sale .sale-content .time-sale p{
+  margin-bottom: 20px;
+}
 
