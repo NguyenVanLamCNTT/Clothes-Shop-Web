@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './modules/welcome/welcome.component';
 import { ProductShopComponent } from './modules/product-shop/product-shop.component';
+import {HttpClientModule} from '@angular/common/http';
 @NgModule({
     declarations: [
         AppComponent,
@@ -13,7 +14,8 @@ import { ProductShopComponent } from './modules/product-shop/product-shop.compon
     ],
     imports: [
         BrowserModule,
-        AppRoutingModule
+        AppRoutingModule,
+        HttpClientModule
     ],
     providers: [],
     exports: [
