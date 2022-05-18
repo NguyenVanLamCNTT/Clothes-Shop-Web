@@ -5,7 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 .active-item{
-  //color: white;
+  color: white !important;
   background-color: #f1bc31;
 }
 :root {

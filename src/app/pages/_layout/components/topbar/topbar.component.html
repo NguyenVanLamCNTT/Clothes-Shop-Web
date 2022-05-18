@@ -8,9 +8,7 @@
         <div class="col d-flex justify-content-end">
           <div class="social-media">
             <p class="mb-0 d-flex">
-              <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="bi bi-facebook"></i></span></a>
-              <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="bi bi-twitter"></i></span></a>
-              <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="bi bi-instagram"></i></span></a>
+              <a *ngFor="let icon of listIconContact" href="{{icon.url}}" class="d-flex align-items-center justify-content-center"><span><i class="{{icon.icon}}"></i></span></a>
             </p>
           </div>
         </div>
@@ -28,21 +26,12 @@
           Register
         </div>
       </div>
-<!--      <form action="#" class="searchform ">-->
-<!--        <div class="form-group d-flex">-->
-<!--          <input type="text" class="form-control pl-3" placeholder="Search">-->
-<!--          <button type="submit" placeholder="" class="form-control search"><i class="bi bi-search"></i></button>-->
-<!--        </div>-->
-<!--      </form>-->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
         <i class="bi bi-justify"></i>
       </button>
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav m-auto">
-          <li class="nav-item active-item"><a href="#" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Shop</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Cart</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+          <li class="nav-item" *ngFor="let menu of listMenu"><a href="{{menu.url}}" class="nav-link {{getActiveMenu(menu.url)}}">{{menu.name}}</a></li>
         </ul>
       </div>
     </div>
