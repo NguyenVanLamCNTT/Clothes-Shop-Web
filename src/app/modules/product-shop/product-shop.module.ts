@@ -6,6 +6,7 @@ import { AsideProductComponent } from './components/aside-product/aside-product.
 import { ProductsComponent } from './components/products/products.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import {BreadcrumbOptionComponent} from '../../core-ui/breadcrumb-option/breadcrumb-option.component';
+import { ProductsState } from 'src/app/clothes-shop/states/products/products.state';
 
 
 
@@ -14,6 +15,9 @@ import {BreadcrumbOptionComponent} from '../../core-ui/breadcrumb-option/breadcr
     imports: [
         CommonModule,
         ProductShopRoutingModule,
+    ],
+    providers: [
+      ProductsState
     ]
 })
 export class ProductShopModule { }

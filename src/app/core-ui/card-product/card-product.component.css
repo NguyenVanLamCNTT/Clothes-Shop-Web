@@ -1,53 +1,88 @@
-.image-product{
-  width: 100%;
-  height: 100%;
-}
-.card-product{
-  display: flex;
-  flex-direction: column;
-}
-.card-content{
-  flex: 1;
-}
-.card-content{
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-}
-.card-footer-product{
-  margin-top: auto;
-}
-.btn-add-cart{
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.5s;
-  margin-top: -300px;
-}
-.card-product:hover .card-content .card-header-product .btn-add-cart{
-  transition-delay: 0.1s;
-  opacity: 1;
-  visibility: visible;
-}
-.card-header-product{
-  margin-top: 10px;
-  flex-shrink: 0;
-}
-.card-product:hover .card-content .card-header-product .card-name{
-  transition-delay: 0.2s;
-  opacity: 1;
-  visibility: hidden;
-}
-.card-name{
-  margin-top: -20px;
-  font-weight: 480;
-}
-.image-hover{
-  display: none;
-}
-.card-product:hover .card-image .image-hover{
-  display: block;
-}
-.card-product:hover .card-image .image-main{
-  display: none;
+.image-product {
+    width: 100%;
+    height: 100%;
 }
 
+.card-product {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.card-image{
+  flex-shrink: 0;
+}
+.card-content {
+    flex: 1;
+}
+
+.card-content {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+}
+.card-footer-product {
+    margin-top: auto;
+}
+
+.btn-add-cart {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    margin-top: -300px;
+}
+
+.card-product:hover .card-content .card-header-product .btn-add-cart {
+    transition-delay: 0.1s;
+    opacity: 1;
+    visibility: visible;
+}
+
+.card-header-product {
+    margin-top: 10px;
+    flex-shrink: 0;
+}
+
+.card-product:hover .card-content .card-header-product .card-name {
+    transition-delay: 0.2s;
+    opacity: 1;
+    visibility: hidden;
+}
+
+.card-name {
+    margin-top: -20px;
+    font-weight: 480;
+}
+
+.image-hover {
+    display: none;
+}
+
+.card-product:hover .card-image .image-hover {
+    display: block;
+}
+
+.card-product:hover .card-image .image-main {
+    display: none;
+}
+
+.card-image {
+    position: relative;
+}
+
+.discount {
+    position: absolute;
+    top: 16px;
+    left: 0px;
+    background-color: black;
+    padding: 5px 15px;
+    color: white;
+    font-size: 11px;
+}
+
+.star {
+    color: orange;
+}
+
+.card-price {
+    font-weight: bold;
+}

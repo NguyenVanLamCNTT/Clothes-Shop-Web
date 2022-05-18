@@ -1,26 +1,35 @@
-<div class="card-product">
-  <div class="card-image">
-    <img class="image-product image-main" src="https://res.cloudinary.com/awi-ln/image/upload/v1645604881/slesome05kwubhrwzsgs.jpg" alt="image">
-    <img class="image-product image-hover" src="https://res.cloudinary.com/awi-ln/image/upload/v1645604883/in3wv0whw4jf1730pisf.jpg" alt="image_2">
-  </div>
-  <div class="card-content">
-    <div class="card-header-product">
-      <a href="#" class="text-danger text-decoration-none btn-add-cart">+ Add To Cart</a>
-      <p class="card-name">
-        POLO PRIMEKNIT
-      </p>
+<div class="card-product" *ngIf="product">
+    <div class="card-image">
+      <div *ngFor="let img of this.product?.productImages">
+        <div *ngIf="img.typeImage === 'Main'">
+          <img class="image-product image-main" src="{{img?.urlImage}}" alt="image">
+        </div>
+        <div *ngIf="img.typeImage === 'People'">
+          <img class="image-product image-hover" src="{{img?.urlImage}}" alt="image_2">
+        </div>
+      </div>
+      <div *ngIf="this.product?.productDiscount !== 0">
+        <div class="discount">SALE</div>
+      </div>
     </div>
-    <div class="card-footer-product">
-      <p class="card-star">
-        <i class="bi bi-star-fill star"></i>
-        <i class="bi bi-star-fill star"></i>
-        <i class="bi bi-star-fill star"></i>
-        <i class="bi bi-star-fill star"></i>
-        <i class="bi bi-star-fill star"></i>
-      </p>
-      <p class="card-price">
-        $67.54
-      </p>
+    <div class="card-content">
+        <div class="card-header-product">
+            <a href="#" class="text-danger text-decoration-none btn-add-cart">+ Add To Cart</a>
+            <p class="card-name">
+                {{this.product?.productName}}
+            </p>
+        </div>
+        <div class="card-footer-product">
+            <p class="card-star">
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-fill star"></i>
+                <i class="bi bi-star-fill star"></i>
+            </p>
+            <p class="card-price">
+                ${{this.product?.productPrice}}
+            </p>
+        </div>
     </div>
-  </div>
 </div>

@@ -4,6 +4,7 @@ import {ApiService} from '../_core/api.service';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {HttpResponse} from '@angular/common/http';
+import {IohProduct} from "../../models/product/ioh-product";
 
 const apiUrl = 'http://localhost:5000/api';
 const productPath = ApiPath.product;
@@ -19,7 +20,7 @@ export class ProductsService {
       .pipe(
         map((response: HttpResponse<any>) => {
           const body = response.body;
-          return body;
+          return IohProduct.fromJson(JSON.stringify(body));
         })
       );
   }

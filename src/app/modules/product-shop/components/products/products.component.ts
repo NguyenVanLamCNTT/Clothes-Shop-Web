@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ProductsService} from '../../../../clothes-shop/services/products/products.service';
+import { IohProduct } from 'src/app/clothes-shop/models/product/ioh-product';
+import {ProductsState} from "../../../../clothes-shop/states/products/products.state";
 
 @Component({
   selector: 'app-products',
@@ -8,14 +9,22 @@ import {ProductsService} from '../../../../clothes-shop/services/products/produc
 })
 export class ProductsComponent implements OnInit {
 
-  constructor(private service: ProductsService) { }
+  listProduct: IohProduct[] = [];
+
+  constructor(private productsState: ProductsState) { }
 
   ngOnInit(): void {
-    this.service.getProducts().subscribe(
-      res => {
-        console.log(res);
-      }, error => {
-        console.log(error);
-      });
+    this.listenState();
+  }
+
+  listenState(): void{
+    this.productsState.listProduct$.subscribe(res => this.listProductChange());
+  }
+  listProductChange(): void{
+    const listProduct = this.productsState.getListProduct();
+    if (listProduct){
+      this.listProduct = listProduct;
+      console.log(this.listProduct);
+    }
   }
 }

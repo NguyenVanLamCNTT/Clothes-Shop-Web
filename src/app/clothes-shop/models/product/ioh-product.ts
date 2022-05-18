@@ -3,33 +3,33 @@ import {IohImage} from '../image/ioh-image';
 
 export class IohProduct{
   @Expose({name: 'id'})
-  productId: number | undefined;
+  productId!: number;
 
   @Expose({name: 'name'})
-  productName: string | undefined;
+  productName!: string;
 
   @Expose({name: 'price'})
-  productPrice: string | undefined;
+  productPrice!: string;
 
   @Expose({name: 'status'})
-  productStatus: string | undefined;
+  productStatus!: string;
 
   @Expose({name: 'discount'})
-  productDiscount: string | undefined;
+  productDiscount!: number;
 
   @Expose({name: 'images'})
   @Type(() => IohImage)
-  productImages: IohImage[] | undefined;
+  productImages!: IohImage[];
 
   @Expose({name: 'created_at'})
   @Exclude({toPlainOnly: true})
   @Type(() => Date)
-  createAt?: Date;
+  createdAt?: Date;
 
   @Expose({name: 'updated_at'})
   @Exclude({toPlainOnly: true})
   @Type(() => Date)
-  updateAt?: Date;
+  updatedAt?: Date;
 
   static fromJson(productDto: any): IohProduct{
     return deserialize(IohProduct, productDto);

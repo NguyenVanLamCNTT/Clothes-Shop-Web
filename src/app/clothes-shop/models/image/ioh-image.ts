@@ -3,29 +3,29 @@ import {classToPlain, deserialize, serialize, Expose, Type, Exclude} from 'class
 
 export class IohImage{
   @Expose({name: 'id'})
-  imageId: number | undefined;
+  imageId!: number;
 
   @Expose({name: 'url'})
-  urlImage: string | undefined;
+  urlImage!: string;
 
   @Expose({name: 'cloudinary_id'})
-  cloudinaryIdImage: string | undefined;
+  cloudinaryIdImage!: string;
 
   @Expose({name: 'type'})
-  typeImage: string | undefined;
+  typeImage!: string;
 
   @Expose({name: 'product_id'})
-  productIdImage: number | undefined;
+  productIdImage!: number;
 
   @Expose({name: 'created_at'})
   @Exclude({toPlainOnly: true})
   @Type(() => Date)
-  createAt?: Date;
+  createdAt?: Date;
 
   @Expose({name: 'updated_at'})
   @Exclude({toPlainOnly: true})
   @Type(() => Date)
-  updateAt?: Date;
+  updatedAt?: Date;
 
   static fromJson(imageDto: any): IohImage{
     return deserialize(IohImage, imageDto);
