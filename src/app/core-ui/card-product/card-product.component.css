@@ -86,3 +86,41 @@
 .card-price {
     font-weight: bold;
 }
+.icon-card{
+  position: absolute;
+  top: 16px;
+  right: 5px;
+}
+.icon-card-item i {
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+}
+.icon-card-item{
+  padding: 5px 10px;
+  background-color: white;
+  margin-bottom: 8px;
+}
+.icon-card{
+  display: none;
+}
+.card-product:hover .card-image .icon-card {
+  display: block;
+}
+.popover-detail{
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  color: white;
+  background-color: black;
+  padding: 5px 10px;
+  font-size: 11px;
+  display: none;
+}
+.icon-card-item:hover .popover-detail{
+  display: block;
+}
+.footer-content{
+  display: flex;
+  justify-content: space-between;
+}

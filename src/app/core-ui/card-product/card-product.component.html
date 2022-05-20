@@ -11,6 +11,15 @@
       <div *ngIf="this.product?.productDiscount !== 0">
         <div class="discount">SALE</div>
       </div>
+      <div class="icon-card">
+        <div class="icon-card-item" type="button">
+          <i class="bi bi-heart"></i>
+        </div>
+        <div class="icon-card-item" type="button">
+          <i class="bi bi-arrow-right"></i>
+          <span class="popover-detail">Detail</span>
+        </div>
+      </div>
     </div>
     <div class="card-content">
         <div class="card-header-product">
@@ -27,9 +36,14 @@
                 <i class="bi bi-star-fill star"></i>
                 <i class="bi bi-star-fill star"></i>
             </p>
-            <p class="card-price">
+            <div class="footer-content">
+              <p class="card-price">
                 ${{this.product?.productPrice}}
-            </p>
+              </p>
+              <p>
+                Like(10)
+              </p>
+            </div>
         </div>
     </div>
 </div>
