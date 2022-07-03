@@ -7,6 +7,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import {BreadcrumbOptionComponent} from '../../core-ui/breadcrumb-option/breadcrumb-option.component';
 import { ProductsState } from 'src/app/clothes-shop/states/products/products.state';
+import {WelcomeModule} from "../welcome/welcome.module";
 
 
 
@@ -15,6 +16,7 @@ import { ProductsState } from 'src/app/clothes-shop/states/products/products.sta
     imports: [
         CommonModule,
         ProductShopRoutingModule,
+        WelcomeModule,
     ],
     providers: [
       ProductsState

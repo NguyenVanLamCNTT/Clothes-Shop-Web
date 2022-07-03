@@ -8,13 +8,16 @@ import {ProductsState} from '../../clothes-shop/states/products/products.state';
 
 
 @NgModule({
-  declarations: [IntroComponent, CardProductComponent],
-  imports: [
-    CommonModule,
-    WelcomeRoutingModule,
-  ],
-  providers: [
-    ProductsState
-  ]
+    declarations: [IntroComponent, CardProductComponent],
+    imports: [
+        CommonModule,
+        WelcomeRoutingModule,
+    ],
+    exports: [
+        CardProductComponent
+    ],
+    providers: [
+        ProductsState
+    ]
 })
 export class WelcomeModule { }
